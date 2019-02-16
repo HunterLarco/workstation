@@ -1,5 +1,13 @@
 #!/bin/bash
 
+# pushd the current directory of this file
+pushd "${0%/*}"
+
+# Copy the config files to their correct locations
+cp bashrc ~/.bash_profile
+cp vimrc ~/.vimrc
+cp tmux.conf ~/.tmux.conf
+
 # Install Homebrew (https://brew.sh/)
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
@@ -27,8 +35,7 @@ brew install tmux
 # Install npm and node
 brew install node
 
-# Install polymer CLI
-npm install -g polymer-cli
-
 # Install wget CLI
 brew install wget
+
+popd
