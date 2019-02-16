@@ -1,0 +1,8 @@
+# Additionally add ~/bin to your default paths.
+export PATH="$PATH:$HOME/bin"
+
+# Additionally add user-level python packages to PATH.
+export PATH="$PATH:$HOME/Library/Python/2.7/bin"
+
+# Alias bazel as blaze.
+alias blaze=bazel

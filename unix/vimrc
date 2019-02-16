@@ -1,0 +1,33 @@
+" Enable syntax highlighting
+syntax on
+
+" Enable line numbers
+set nu
+
+" Enable column numbers
+set ruler
+
+" Disable arrow keys.
+map <up> <nop>
+map <down> <nop>
+map <left> <nop>
+map <right> <nop>
+imap <up> <nop>
+imap <down> <nop>
+imap <left> <nop>
+imap <right> <nop>
+
+" Indent using 2 spaces
+set expandtab
+set softtabstop=2
+set shiftwidth=2
+
+" Automatically indent
+filetype plugin indent on
+set autoindent
+
+" Set the view type for the internal file system explorer.
+let g:netrw_liststyle = 3
+
+" Set the filetype for VueJS files to HTML
+autocmd BufNewFile,BufRead *.vue set filetype=html

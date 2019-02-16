@@ -1,0 +1,2 @@
+To configure a UNIX workstatation, run `unix/setup.sh`
+To configure a LINUX workstatation, run `linux/setup.sh`
