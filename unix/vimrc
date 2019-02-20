@@ -1,10 +1,10 @@
-" Enable syntax highlighting
+" Enable syntax highlighting.
 syntax on
 
-" Enable line numbers
+" Enable line numbers.
 set nu
 
-" Enable column numbers
+" Enable column numbers.
 set ruler
 
 " Disable arrow keys.
@@ -17,17 +17,30 @@ imap <down> <nop>
 imap <left> <nop>
 imap <right> <nop>
 
-" Indent using 2 spaces
+" Indent using 2 spaces.
 set expandtab
 set softtabstop=2
 set shiftwidth=2
 
-" Automatically indent
+" Override the python syntax file's intend settings.
+let g:python_recommended_style = 0
+
+" Automatically indent.
 filetype plugin indent on
 set autoindent
 
 " Set the view type for the internal file system explorer.
 let g:netrw_liststyle = 3
 
-" Set the filetype for VueJS files to HTML
+" Set the filetype for VueJS files to HTML.
 autocmd BufNewFile,BufRead *.vue set filetype=html
+
+" Turn on plugins for the detected file type.
+filetype plugin on
+
+" Configuration for the plugin vim-instant-markdown
+"
+" This plugin renders markdown files as they are edited. This flag in
+" particular ensures that re-rendering events are only triggered by file
+" saves.
+let g:instant_markdown_slow = 1
