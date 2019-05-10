@@ -48,4 +48,7 @@ sudo npm -g install instant-markdown-d
 mkdir -p ~/.vim/after/ftplugin/markdown/
 wget https://raw.githubusercontent.com/suan/vim-instant-markdown/master/after/ftplugin/markdown/instant-markdown.vim -P ~/.vim/after/ftplugin/markdown/
 
+# Install gulp.
+npm install --global gulp-cli
+
 popd
