@@ -51,4 +51,7 @@ wget https://raw.githubusercontent.com/suan/vim-instant-markdown/master/after/ft
 # Install gulp.
 npm install --global gulp-cli
 
+# Install watch.
+brew install watch
+
 popd
