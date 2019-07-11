@@ -54,4 +54,7 @@ npm install --global gulp-cli
 # Install watch.
 brew install watch
 
+# Install nginx
+brew install nginx
+
 popd
