@@ -57,4 +57,7 @@ brew install watch
 # Install nginx
 brew install nginx
 
+# Install docker
+brew install docker
+
 popd
