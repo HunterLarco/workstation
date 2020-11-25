@@ -3,11 +3,6 @@
 # pushd the current directory of this file
 pushd "${0%/*}"
 
-# Copy the config files to their correct locations
-cp bashrc ~/.bash_profile
-cp vimrc ~/.vimrc
-cp tmux.conf ~/.tmux.conf
-
 # Install Homebrew (https://brew.sh/)
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
@@ -59,5 +54,24 @@ brew install nginx
 
 # Install docker
 brew install docker
+
+# Install ag
+brew install the_silver_searcher
+
+# Install urlview
+brew install urlview
+
+# Install vifm
+brew install vifm
+
+# Copy the config files to their correct locations
+cp bashrc ~/.bash_profile
+cp vimrc ~/.vimrc
+cp -r vim/templates ~/.vim/
+cp tmux.conf ~/.tmux.conf
+cp vifm/vifmrc ~/.vifm/vifmrc
+
+# Install TPM
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 popd

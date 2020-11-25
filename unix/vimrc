@@ -17,30 +17,45 @@ imap <down> <nop>
 imap <left> <nop>
 imap <right> <nop>
 
+" Remap <tab> to <esc>
+inoremap <tab> <esc>
+
 " Indent using 2 spaces.
 set expandtab
+set tabstop=2
 set softtabstop=2
 set shiftwidth=2
-
-" Override the python syntax file's intend settings.
-let g:python_recommended_style = 0
 
 " Automatically indent.
 filetype plugin indent on
 set autoindent
 
+" Override the python syntax file's intend settings.
+let g:python_recommended_style = 0
+
 " Set the view type for the internal file system explorer.
 let g:netrw_liststyle = 3
+
+" Turn on plugins for the detected file type
+filetype plugin on
 
 " Set the filetype for VueJS files to HTML.
 autocmd BufNewFile,BufRead *.vue set filetype=html
 
-" Turn on plugins for the detected file type.
-filetype plugin on
+" Set the filetype for MJML files to HTML.
+autocmd BufNewFile,BufRead *.mjml set filetype=html
 
-" Configuration for the plugin vim-instant-markdown
-"
-" This plugin renders markdown files as they are edited. This flag in
-" particular ensures that re-rendering events are only triggered by file
-" saves.
-let g:instant_markdown_slow = 1
+" Set the filetype for *.BUILD files to bazel BUILD.
+autocmd BufNewFile,BufRead *.BUILD set filetype=bzl
+
+" Set the filetype for *rc files to vim.
+autocmd BufNewFile,BufRead *rc set filetype=vim
+
+" Highlight text over 80 chars
+highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+match OverLength /\%81v.\+/
+
+" Add skeletons for common extensions.
+augroup templates
+  autocmd BufNewFile *.vue 0r ~/.vim/templates/skeleton.vue
+augroup END
