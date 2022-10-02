@@ -30,6 +30,9 @@ set shiftwidth=2
 filetype plugin indent on
 set autoindent
 
+" Remember the last editing position
+au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+
 " Override the python syntax file's intend settings.
 let g:python_recommended_style = 0
 
