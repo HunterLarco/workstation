@@ -8,3 +8,5 @@ set grepprg=ag\ --vimgrep\ $*
 
 " Single pane
 only
+
+set vifminfo=dhistory,chistory,state,tui,shistory,phistory,fhistory,dirstack,registers,bookmarks,bmarks
