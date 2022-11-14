@@ -36,12 +36,14 @@ brew install node
 # Install wget CLI
 brew install wget
 
-# Install a plugin to rendered markdown files during editing in vim.
-sudo npm -g install instant-markdown-d
+# Install GraphQL vim plugin
+git clone https://github.com/jparise/vim-graphql.git \
+    ~/.vim/pack/jparise/graphql
+vim -u NONE -c "helptags graphql/doc" -c q
 
-# Prepare the required vim directory for the above command to work correctly.
-mkdir -p ~/.vim/after/ftplugin/markdown/
-wget https://raw.githubusercontent.com/suan/vim-instant-markdown/master/after/ftplugin/markdown/instant-markdown.vim -P ~/.vim/after/ftplugin/markdown/
+# Install Typescript vim plugin
+git clone https://github.com/leafgarland/typescript-vim.git \
+    ~/.vim/pack/typescript/start/typescript-vim
 
 # Install gulp.
 npm install --global gulp-cli
