@@ -45,6 +45,10 @@ vim -u NONE -c "helptags graphql/doc" -c q
 git clone https://github.com/leafgarland/typescript-vim.git \
     ~/.vim/pack/typescript/start/typescript-vim
 
+# Install PrismaJS vim plugin
+git clone https://github.com/pantharshit00/vim-prisma \
+  ~/.vim/pack/prisma/start/vim-prisma
+
 # Install gulp.
 npm install --global gulp-cli
 
