@@ -1,13 +1,14 @@
+<script setup>
+import { ref, computed } from 'vue';
+</script>
+
 <template>
-  <div :class="$style.Host">
+  <div class="Host">
+    My New Component!
   </div>
 </template>
 
-<script>
-export default {};
-</script>
-
-<style module lang="sass">
+<style scoped lang="scss">
 .Host {
 }
 </style>
