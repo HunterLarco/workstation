@@ -49,6 +49,9 @@ git clone https://github.com/leafgarland/typescript-vim.git \
 git clone https://github.com/pantharshit00/vim-prisma \
   ~/.vim/pack/prisma/start/vim-prisma
 
+# Install kubectl
+brew install kubectl
+
 # Install gulp.
 npm install --global gulp-cli
 
