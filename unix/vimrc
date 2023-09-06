@@ -62,3 +62,6 @@ match OverLength /\%81v.\+/
 augroup templates
   autocmd BufNewFile *.vue 0r ~/.vim/templates/skeleton.vue
 augroup END
+
+" Increase copy buffer as per https://stackoverflow.com/a/3676914
+set viminfo='100,<1000,s100,h
